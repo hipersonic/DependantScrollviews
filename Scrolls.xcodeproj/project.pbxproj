@@ -12,6 +12,10 @@
 		B35755EE1D0981F100CA3CC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35755EC1D0981F100CA3CC8 /* Main.storyboard */; };
 		B35755F01D0981F100CA3CC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B35755EF1D0981F100CA3CC8 /* Assets.xcassets */; };
 		B35755F31D0981F100CA3CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B35755F11D0981F100CA3CC8 /* LaunchScreen.storyboard */; };
+		B35756051D0AD6D400CA3CC8 /* ScrollerIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35756041D0AD6D400CA3CC8 /* ScrollerIndicatorView.swift */; };
+		B357560A1D0AD6E000CA3CC8 /* ConverterCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35756071D0AD6E000CA3CC8 /* ConverterCellModel.swift */; };
+		B357560B1D0AD6E000CA3CC8 /* IndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35756081D0AD6E000CA3CC8 /* IndicatorTableViewCell.swift */; };
+		B357560C1D0AD6E000CA3CC8 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35756091D0AD6E000CA3CC8 /* MasterTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		B35755EF1D0981F100CA3CC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B35755F21D0981F100CA3CC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B35755F41D0981F100CA3CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B35756041D0AD6D400CA3CC8 /* ScrollerIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollerIndicatorView.swift; path = ScrollerIndicator/ScrollerIndicatorView.swift; sourceTree = "<group>"; };
+		B35756071D0AD6E000CA3CC8 /* ConverterCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterCellModel.swift; sourceTree = "<group>"; };
+		B35756081D0AD6E000CA3CC8 /* IndicatorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		B35756091D0AD6E000CA3CC8 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,25 @@
 			children = (
 				B35755E81D0981F100CA3CC8 /* AppDelegate.swift */,
 				B35755EA1D0981F100CA3CC8 /* ViewController.swift */,
+				B35756041D0AD6D400CA3CC8 /* ScrollerIndicatorView.swift */,
+				B35756061D0AD6E000CA3CC8 /* Cells */,
 				B35755EC1D0981F100CA3CC8 /* Main.storyboard */,
 				B35755EF1D0981F100CA3CC8 /* Assets.xcassets */,
 				B35755F11D0981F100CA3CC8 /* LaunchScreen.storyboard */,
 				B35755F41D0981F100CA3CC8 /* Info.plist */,
 			);
 			path = Scrolls;
+			sourceTree = "<group>";
+		};
+		B35756061D0AD6E000CA3CC8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B35756071D0AD6E000CA3CC8 /* ConverterCellModel.swift */,
+				B35756081D0AD6E000CA3CC8 /* IndicatorTableViewCell.swift */,
+				B35756091D0AD6E000CA3CC8 /* MasterTableViewCell.swift */,
+			);
+			name = Cells;
+			path = ScrollerIndicator/Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +157,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B35755EB1D0981F100CA3CC8 /* ViewController.swift in Sources */,
+				B357560A1D0AD6E000CA3CC8 /* ConverterCellModel.swift in Sources */,
 				B35755E91D0981F100CA3CC8 /* AppDelegate.swift in Sources */,
+				B357560C1D0AD6E000CA3CC8 /* MasterTableViewCell.swift in Sources */,
+				B35756051D0AD6D400CA3CC8 /* ScrollerIndicatorView.swift in Sources */,
+				B357560B1D0AD6E000CA3CC8 /* IndicatorTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +313,7 @@
 				B35755F91D0981F100CA3CC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

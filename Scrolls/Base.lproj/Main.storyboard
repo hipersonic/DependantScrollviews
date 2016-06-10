@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,81 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htS-jv-koA">
-                                <rect key="frame" x="40" y="120" width="250" height="150"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gHJ-PG-z6G">
-                                        <rect key="frame" x="0.0" y="45" width="250" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="4z3-Jp-Z0n"/>
-                                            <constraint firstAttribute="height" priority="1" constant="30" id="8ph-yN-132"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="4z3-Jp-Z0n"/>
-                                            </mask>
-                                        </variation>
-                                    </stackView>
-                                </subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2t-8b-FO4" customClass="ScrollerIndicatorView" customModule="Scrolls" customModuleProvider="target">
+                                <rect key="frame" x="200" y="150" width="200" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="gHJ-PG-z6G" firstAttribute="leading" secondItem="htS-jv-koA" secondAttribute="leading" id="1cP-FA-Weq"/>
-                                    <constraint firstAttribute="trailing" secondItem="gHJ-PG-z6G" secondAttribute="trailing" id="AY3-F2-B8h"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="EfW-Qu-o7p"/>
-                                    <constraint firstItem="gHJ-PG-z6G" firstAttribute="top" secondItem="htS-jv-koA" secondAttribute="top" constant="45" id="FbU-5W-a33"/>
-                                    <constraint firstAttribute="height" constant="150" id="Jr7-hJ-C0x"/>
-                                    <constraint firstItem="gHJ-PG-z6G" firstAttribute="width" secondItem="htS-jv-koA" secondAttribute="width" id="bdJ-Da-4xq"/>
-                                    <constraint firstAttribute="bottom" secondItem="gHJ-PG-z6G" secondAttribute="bottom" constant="45" id="ktS-1s-wf0"/>
-                                    <constraint firstAttribute="width" constant="250" id="xWY-A9-bU8"/>
+                                    <constraint firstAttribute="height" constant="300" id="InL-nM-tor"/>
+                                    <constraint firstAttribute="width" constant="200" id="nFb-nL-Rhs"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="EfW-Qu-o7p"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3xL-L5-tKR"/>
-                                </connections>
-                            </scrollView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bD-3X-Ql1">
-                                <rect key="frame" x="15" y="165" width="300" height="60"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o2v-lH-OKb">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="110" id="ePx-Hz-uOn"/>
-                                            <constraint firstAttribute="height" priority="1" constant="30" id="xl8-qJ-fLm"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="ePx-Hz-uOn"/>
-                                            </mask>
-                                        </variation>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="2cc-bC-dbm"/>
-                                    <constraint firstAttribute="height" constant="60" id="OWF-4M-qkY"/>
-                                    <constraint firstAttribute="bottom" secondItem="o2v-lH-OKb" secondAttribute="bottom" id="YC9-JO-ao2"/>
-                                    <constraint firstItem="o2v-lH-OKb" firstAttribute="width" secondItem="6bD-3X-Ql1" secondAttribute="width" id="aRM-xd-L5i"/>
-                                    <constraint firstItem="o2v-lH-OKb" firstAttribute="leading" secondItem="6bD-3X-Ql1" secondAttribute="leading" id="b2v-IU-nRX"/>
-                                    <constraint firstItem="o2v-lH-OKb" firstAttribute="top" secondItem="6bD-3X-Ql1" secondAttribute="top" id="gaN-0u-awc"/>
-                                    <constraint firstAttribute="trailing" secondItem="o2v-lH-OKb" secondAttribute="trailing" id="uzI-2B-T1w"/>
-                                </constraints>
-                            </scrollView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6bD-3X-Ql1" firstAttribute="centerY" secondItem="htS-jv-koA" secondAttribute="centerY" id="5Fh-W8-r1v"/>
-                            <constraint firstItem="htS-jv-koA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Nte-D7-jy5"/>
-                            <constraint firstItem="htS-jv-koA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="QNq-7D-AQk"/>
-                            <constraint firstItem="6bD-3X-Ql1" firstAttribute="centerX" secondItem="htS-jv-koA" secondAttribute="centerX" id="sLT-2V-A7O"/>
+                            <constraint firstItem="T2t-8b-FO4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bjy-fu-K98"/>
+                            <constraint firstItem="T2t-8b-FO4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I5R-JG-j0W"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="scrollViewBottom" destination="htS-jv-koA" id="hhA-Xd-cJA"/>
-                        <outlet property="scrollViewTop" destination="6bD-3X-Ql1" id="odc-WA-WGp"/>
-                        <outlet property="stackViewBottom" destination="gHJ-PG-z6G" id="Hw7-o3-2Ei"/>
-                        <outlet property="stackViewTop" destination="o2v-lH-OKb" id="Ov6-aP-BWg"/>
+                        <outlet property="scrollIndicatorView" destination="T2t-8b-FO4" id="0D9-f2-vPx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
